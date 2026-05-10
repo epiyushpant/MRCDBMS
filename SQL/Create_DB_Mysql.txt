@@ -1,0 +1,51 @@
+-- Student Table
+CREATE TABLE Student (
+    StudentID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Department VARCHAR(50)
+);
+
+-- Course Table
+CREATE TABLE Course (
+    CourseID INT AUTO_INCREMENT PRIMARY KEY,
+    Title VARCHAR(100),
+    Credits INT,
+    Department VARCHAR(50)
+);
+
+-- Enrollment Table
+CREATE TABLE Enrollment (
+    EnrollID INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID INT,
+    CourseID INT,
+    Grade VARCHAR(2),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);
+
+
+
+-- Students
+INSERT INTO Student (Name, Age, Department) VALUES
+('Alice', 21, 'Computer Science'),
+('Bob', 19, 'Physics'),
+('Charlie', 22, 'Mathematics'),
+('Diana', 20, 'Computer Science'),
+('Ethan', 23, 'Physics');
+
+-- Courses
+INSERT INTO Course (Title, Credits, Department) VALUES
+('Database Systems', 3, 'Computer Science'),
+('Quantum Mechanics', 4, 'Physics'),
+('Linear Algebra', 3, 'Mathematics'),
+('Operating Systems', 4, 'Computer Science');
+
+-- Enrollments
+INSERT INTO Enrollment (StudentID, CourseID, Grade) VALUES
+(1, 1, 'A'),
+(1, 4, 'B'),
+(2, 2, 'A'),
+(3, 3, NULL),
+(4, 1, 'C'),
+(5, 2, 'B');
