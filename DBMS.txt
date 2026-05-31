@@ -1,0 +1,18 @@
+5.1 Features of good relational designs
+Anuj
+
+5.2 Keys: Super Key, Candidate Keys and Primary Keys
+
+Anil and Sohan
+
+5.3 Functional Dependencies
+Jyoti and salina
+
+
+5.4 Anomalies  and 5.5 Decomposition using functional dependencies
+
+Sisan and Sharad
+
+
+5.6 Normal forms: 1NF, 2NF, 3NF and BCNF
+Saurab and Saugat
